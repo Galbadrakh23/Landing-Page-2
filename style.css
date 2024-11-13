@@ -5,13 +5,15 @@
 body {
   /* Home */
   position: relative;
-  width: 100vh;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
   background: #fdfdff;
 }
 .header {
   /* Header */
   position: absolute;
-  width: 100vh;
+  width: 100vw;
   height: 34px;
   left: 25px;
   top: 24px;
@@ -110,12 +112,15 @@ body {
   top: 0%;
   bottom: 41.18%;
 }
-.category1 {
+.category1,
+.category2 {
   position: absolute;
-  width: 100vh;
+  width: 100vw;
+  max-width: 1110px;
   height: 406px;
   top: 841px;
-  left: 231px;
+  left: 0;
+  margin: 0 auto;
   gap: 0px;
   border-radius: 10px 10px 10px 10px;
   opacity: 0px;
@@ -123,21 +128,11 @@ body {
   gap: 30px;
   z-index: 2;
 }
-.category2 {
+.Back1,
+.Back1B {
   position: absolute;
-  width: 1110px;
-  height: 406px;
-  top: 1274px;
-  left: 231px;
-  gap: 0px;
-  border-radius: 10px 10px 10px 10px;
-  opacity: 0px;
-  display: flex;
-  gap: 30px;
-}
-.Back1 {
-  position: absolute;
-  width: 1570px;
+  width: 100%;
+  max-width: 1570px;
   height: 918px;
   left: 15px;
   top: 82px;
@@ -145,15 +140,7 @@ body {
   opacity: 0px;
   background-image: url(/59bfe92dcdb36ac2c2cd052f63c187cf.png);
   background-position: center;
-  background-size: contain;
-}
-.Back1B {
-  width: 1570px;
-  height: 918px;
-  left: 15px;
-  top: 82px;
-  background-color: #161c2d;
-  opacity: 0.4;
+  background-size: cover;
 }
 .BGcontent {
   position: absolute;
@@ -301,6 +288,8 @@ body {
   gap: 0px;
   opacity: 0px;
   border-radius: 10px 10px 10px 10px;
+  object-fit: cover;
+  background-size: cover;
 }
 .ins-price {
   position: relative;
@@ -377,6 +366,8 @@ body {
   background-image: url(/content.svg);
   background-position: center;
   background-size: cover;
+  object-fit: cover;
+  background-size: cover;
 }
 .c_content {
   position: absolute;
@@ -429,6 +420,12 @@ body {
   letter-spacing: -0.6000000238418579px;
   text-align: left;
   color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.StartB button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 .Testimonial {
@@ -453,6 +450,8 @@ body {
   left: 990px;
   border-radius: 10px;
   background-image: url(wImage.png);
+  object-fit: cover;
+  background-size: cover;
 }
 
 .content_left {
@@ -488,10 +487,10 @@ body {
 .CTA {
   display: flex;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 792px;
   top: 4640px;
-  left: 16px;
+  left: 0;
   gap: 0px;
   background-image: url(/CTABgIMG.svg);
   background-position: cover;
@@ -548,11 +547,18 @@ body {
   letter-spacing: -0.6000000238418579px;
   text-align: center;
   color: #161c2d;
+  transition: all 0.3s ease;
+}
+
+.contentB button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 footer {
   position: absolute;
-  width: 1601px;
+  width: 100%;
+  max-width: 1601px;
   height: 533px;
   top: 5432px;
   padding: 0.5px 0.5px 0.5px 0.5px;
